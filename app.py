@@ -19,7 +19,7 @@ def communicate():
     messages.append(user_message)
 
     response = openai.ChatCompletion.create(
-        model="gpt-4-turbo",
+        model="gpt-4",
         messages=messages
     )
 
@@ -31,7 +31,7 @@ def communicate():
 
 # ユーザーインターフェイスの構築
 st.title("My AI Assistant")
-st.write("ChatGPT APIを使ったチャットボットです。")
+st.write("ChatGPT API「GPT-4」を使ったチャットボットです。")
 
 user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
 
